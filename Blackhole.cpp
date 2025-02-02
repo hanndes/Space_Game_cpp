@@ -3,3 +3,10 @@
 //
 
 #include "Blackhole.h"
+
+Blackhole::Blackhole(int x,int y):Object("K",x,y) {
+
+}
+Blackhole::~Blackhole() {
+
+}

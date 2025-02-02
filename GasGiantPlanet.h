@@ -11,7 +11,7 @@ class GasGiantPlanet:public Planet {
 
 public:
     GasGiantPlanet();
-    GasGiantPlanet(string name, int x, int y, string atmosphereState,Source srcs,float gravity);
+    GasGiantPlanet(string name, int x, int y);
     ~GasGiantPlanet();
 };
 

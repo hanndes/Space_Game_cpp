@@ -8,10 +8,10 @@
 using namespace std;
 
 class Object{
- public:
     string name;
     int x;
     int y;
+public:
     Object();
     Object(string name,int x,int y);
 };

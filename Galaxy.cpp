@@ -18,17 +18,18 @@ void Galaxy::createPlanet() {
     //Creating planets
     while (planetCounter > 0) {
         int randomPlanetType = rand() % 3; // 0-2 arasında random value
+        char randomName = 'A' + (rand() % 26); // 0-25 arasında bir değer üret ve 'A'ya ekle
         int x = rand() % 5; // 0-4 arasında rastgele bir satır
         int y = rand() % 5; // 0-4 arasında rastgele bir sütun
         if (gameScene[x][y] == NULL) {
             switch (randomPlanetType) {
-                case 0: gameScene[x][y] = new HabitablePlanet();
+                case 0: gameScene[x][y] = new HabitablePlanet(randomName,x,y);
                     planetCounter--;
                     break;
-                case 1: gameScene[x][y] = new GasGiantPlanet();
+                case 1: gameScene[x][y] = new GasGiantPlanet(randomName,x,y);
                     planetCounter--;
                     break;
-                case 2: gameScene[x][y] = new DwarfPlanet();
+                case 2: gameScene[x][y] = new DwarfPlanet(randomName,x,y);
                     planetCounter--;
                     break;
             }
@@ -38,14 +39,16 @@ void Galaxy::createPlanet() {
         int x = rand() % 5; // 0-4 arasında rastgele bir satır
         int y = rand() % 5; // 0-4 arasında rastgele bir sütun
         if (gameScene[x][y] == NULL) {
-            gameScene[x][y] = new Blackhole();
+            gameScene[x][y] = new Blackhole(x,y);
             blackholeCounter--;
         }
     }
     while (!isShuttlePlaced) {
         int x = rand() % 5; // 0-4 arasında rastgele bir satır
         int y = rand() % 5; // 0-4 arasında rastgele bir sütun
-        gameScene[x][y] = new SpaceShuttle();
+        if (gameScene[x][y] == NULL) {
+            gameScene[x][y] = new SpaceShuttle(x,y);
+        }
     }
 }
 

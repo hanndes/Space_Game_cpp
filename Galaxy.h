@@ -12,7 +12,7 @@
 
 class Galaxy {
 Object * gameScene[5][5];
-Planet *planets[3]={new HabitablePlanet(),new GasGiantPlanet(),new DwarfPlanet()};
+//Planet *planets[3]={new HabitablePlanet(),new GasGiantPlanet(),new DwarfPlanet()};
 public:
     void createPlanet();
     void showGalaxy();

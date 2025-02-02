@@ -16,7 +16,7 @@ public:
     HabitablePlanet();
 
     // Parameterized constructor
-    HabitablePlanet(string name, int x, int y, string atmosphereState, Source srcs, float gravity);
+    HabitablePlanet(string name, int x, int y);
 
     // Destructor
     ~HabitablePlanet();

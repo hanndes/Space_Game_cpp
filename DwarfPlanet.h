@@ -8,7 +8,9 @@
 
 
 class DwarfPlanet: public Planet {
-
+public:
+    DwarfPlanet();
+    ~DwarfPlanet();
 };
 
 

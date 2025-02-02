@@ -3,3 +3,11 @@
 //
 
 #include "DwarfPlanet.h"
+
+
+
+
+
+DwarfPlanet::~DwarfPlanet() {
+
+}

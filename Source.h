@@ -11,7 +11,9 @@ class Source {
   float water;
   float mine;
   float energy;
-
+public:
+  Source();
+  ~Source();
 };
 
 

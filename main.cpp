@@ -7,9 +7,9 @@ using namespace std;
 
 
 int main(){
-Galaxy *galaxy = new Galaxy();
+  Galaxy *galaxy = new Galaxy();
   galaxy->createPlanet();
 
-delete galaxy;
+  delete galaxy;
   return 0;
 }

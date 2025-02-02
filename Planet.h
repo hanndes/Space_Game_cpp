@@ -12,17 +12,17 @@ using namespace std;
 
 // Abstract class
 class Planet : public Object {
-
-    string name;
-    int x, y;
+    protected:
+    string states[3] ={"Habitable","Posion","Dense"};
     string atmosphereState;
-    Source srcs;
+    Source* srcs;
     float gravity;
 
 public:
     // Constructors
     Planet();
-    Planet(string name, int x, int y, string atmosphereState, Source srcs, float gravity);
+
+    Planet(string name, int x, int y);
 
     // Pure virtual function
     virtual double calculateLandingCost() const = 0;
@@ -35,4 +35,3 @@ public:
 };
 
 #endif //PLANET_H
-

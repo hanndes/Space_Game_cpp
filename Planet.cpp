@@ -12,7 +12,10 @@ Planet::Planet() {
 
 }
 
-Planet::Planet(string name, int x, int y, string atmosphereState, Source srcs, float gravity):name(name),x(x),y(y),atmosphereState(atmosphereState),srcs(srcs),gravity(gravity) {
+Planet::Planet(string name, int x, int y):Object(name,x,y) {
+    srand(time(NULL));
+    this->atmosphereState=states[rand()%4];
+    this->srcs = new Source();
 
 }
 

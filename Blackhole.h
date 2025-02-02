@@ -9,6 +9,9 @@
 
 class Blackhole:public Object {
 
+    public:
+    Blackhole(int x ,int y);
+    ~Blackhole();
 };
 
 
