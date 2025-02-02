@@ -1,0 +1,3 @@
+C:/Users/hande/OneDrive/Masaüstü/SPACE_GAME/cmake-build-debug/CMakeFiles/SPACE_GAME.dir
+C:/Users/hande/OneDrive/Masaüstü/SPACE_GAME/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/hande/OneDrive/Masaüstü/SPACE_GAME/cmake-build-debug/CMakeFiles/rebuild_cache.dir
