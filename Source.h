@@ -13,6 +13,12 @@ class Source {
   float energy;
 public:
   Source();
+  void setWater(float);
+  void setMine(float);
+  void setEnergy(float);
+  float getWater();
+  float getMine();
+  float getEnergy();
   ~Source();
 };
 

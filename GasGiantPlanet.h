@@ -7,14 +7,13 @@
 #include "Planet.h"
 
 
-class GasGiantPlanet:public Planet {
-
+class GasGiantPlanet : public Planet {
 public:
     GasGiantPlanet();
-    GasGiantPlanet(string name, int x, int y);
+    GasGiantPlanet(char name, int x, int y);
+    float calculateLandingCost() const override;
     ~GasGiantPlanet();
 };
-
 
 
 #endif //GASGIANTPLANET_H

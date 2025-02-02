@@ -12,14 +12,10 @@ using namespace std;
 
 class HabitablePlanet : public Planet {
 public:
-    // Default constructor
     HabitablePlanet();
-
-    // Parameterized constructor
-    HabitablePlanet(string name, int x, int y);
-
-    // Destructor
+    HabitablePlanet(char name, int x, int y);
     ~HabitablePlanet();
+    float calculateLandingCost() const override;
 };
 
 

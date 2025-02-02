@@ -7,15 +7,23 @@
 #include <iostream>
 using namespace std;
 
-class Object{
-    string name;
+class Object {
+    char name;
     int x;
     int y;
+
 public:
     Object();
-    Object(string name,int x,int y);
+    Object(char name, int x, int y);
+    char getName();
+    void setName(char name);
+    int getX();
+    int getY();
+    void setX(int x);
+    void setY(int y);
+    virtual void print()=0;
+    virtual ~Object();
 };
-
 
 
 #endif //OBJECT_H

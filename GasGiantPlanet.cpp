@@ -8,8 +8,13 @@
 GasGiantPlanet::GasGiantPlanet() {
 
 }
-GasGiantPlanet::GasGiantPlanet(string name,int x,int y):Planet(name,x,y) {
+GasGiantPlanet::GasGiantPlanet(char name,int x,int y):Planet(name,x,y) {
+    cout<<"GasGiantPlanet constructed"<<endl;
 
+}
+float GasGiantPlanet::calculateLandingCost() const {
+  //  const float fuelCostPerGravity = 5.0f;
+   return 0;
 }
 GasGiantPlanet::~GasGiantPlanet() {
 cout<<"Destroying GasGiantPlanet"<<endl;

@@ -9,15 +9,18 @@
 
 #include "HabitablePlanet.h"
 
-HabitablePlanet::HabitablePlanet(string name, int x, int y)
-    : Planet(name, x, y) {
+HabitablePlanet::HabitablePlanet(char name, int x, int y)
+    : Planet(name, x, y){
+  cout << "HabitablePlanet constructed." << endl;
+
+}
+
+float HabitablePlanet::calculateLandingCost() const {
+//   const float fuelCostPerGravity = 5.0f;
+    return 0;
+
 }
 
 HabitablePlanet::~HabitablePlanet() {
     cout << "HabitablePlanet destroyed." << endl;
-}
-
-
-HabitablePlanet::~HabitablePlanet() {
-    cout<<"Destroying HabitablePlanet"<<endl;
 }

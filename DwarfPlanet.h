@@ -7,12 +7,12 @@
 #include "Planet.h"
 
 
-class DwarfPlanet: public Planet {
+class DwarfPlanet : public Planet {
 public:
-    DwarfPlanet();
+    DwarfPlanet(char name, int x, int y);
+    float calculateLandingCost() const override;
     ~DwarfPlanet();
 };
-
 
 
 #endif //DWARFPLANET_H

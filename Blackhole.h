@@ -11,6 +11,7 @@ class Blackhole:public Object {
 
     public:
     Blackhole(int x ,int y);
+    void print() override;
     ~Blackhole();
 };
 

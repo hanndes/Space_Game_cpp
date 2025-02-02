@@ -17,8 +17,15 @@ class SpaceShuttle: public Object {
     Source *srcs;
 
 public:
-    SpaceShuttle(int x,int y);
-    void goToPlanet();
+    SpaceShuttle(int,int);
+    float getFuel();
+    void setFuel(float);
+    Source* getSource();
+    void setSource(Source*);
+    string getState();
+    void setState(string);
+    bool goToPlanet(Object*[5][5],int[]);
+    void print() override;
     void collectSource();
     void improveVehicle();
     ~SpaceShuttle();
