@@ -3,6 +3,11 @@
 //
 
 #include "SpaceShuttle.h"
+#include "Blackhole.h"
+#include "DwarfPlanet.h"
+#include "GasGiantPlanet.h"
+#include "HabitablePlanet.h"
+#include "Planet.h"
 
 
 SpaceShuttle::SpaceShuttle(int x, int y)
@@ -46,17 +51,28 @@ bool SpaceShuttle::goToPlanet(Object *gameScene[5][5], int loc[]) {
     cout << "Going to planet..." << endl;
     this->setX(loc[0]);
     this->setY(loc[1]);
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 5; j++) {
-            if (gameScene[i][j] != nullptr) {
-                cout << "Object exists at [" << i << "][" << j << "]" << endl;
-                cout << "Name: " << gameScene[i][j]->getName() << endl;
-            } else {
-                cout << "Null object at [" << i << "][" << j << "]" << endl;
-            }
+    cout << "in Go To Planet" << endl;
+    Object *planet = gameScene[loc[0]][loc[1]];
+    if (Planet *p = dynamic_cast<Planet *>(planet)) {
+        if (HabitablePlanet *habitable = dynamic_cast<HabitablePlanet *>(p)) {
+            cout << "HabitablePlanet detected!" << endl;
+            this->setFuel(this->getFuel() - habitable->calculateLandingCost());
+        } else if (DwarfPlanet *dwarf = dynamic_cast<DwarfPlanet *>(p)) {
+            cout << "DwarfPlanet detected!" << endl;
+            this->setFuel(this->getFuel() - dwarf->calculateLandingCost());
+        } else if (GasGiantPlanet *gasGiant = dynamic_cast<GasGiantPlanet *>(p)) {
+            cout << "GasGiantPlanet detected!" << endl;
+            this->setFuel(this->getFuel() - gasGiant->calculateLandingCost());
+        } else {
+            cout << "Unknown Planet type!" << endl;
         }
+    } else if (Blackhole *blackhole = dynamic_cast<Blackhole *>(planet)) {
+        cout << "Blackhole detected!" << endl;
+    } else {
+        cout << "Unknown Object type!" << endl;
     }
-    (gameScene[loc[0]][loc[1]])->setName(this->getName());
+    gameScene[this->getX()][this->getY()];
+    gameScene[(loc[0])][(loc[1])] = this;
     return true;
 }
 

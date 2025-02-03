@@ -18,7 +18,6 @@ int main() {
     Galaxy *galaxy = new Galaxy();
     galaxy->createPlanet(ss);
     galaxy->startingScene();
-
     while (ss->getFuel() > 0) {
         galaxy->showGalaxy();
         cout << ss->getFuel() << endl;

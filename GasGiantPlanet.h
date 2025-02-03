@@ -11,6 +11,7 @@ class GasGiantPlanet : public Planet {
 public:
     GasGiantPlanet();
     GasGiantPlanet(char name, int x, int y);
+    void goToPlanet(SpaceShuttle *ss) const override;
     float calculateLandingCost() const override;
     ~GasGiantPlanet();
 };

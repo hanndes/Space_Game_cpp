@@ -21,7 +21,7 @@ void Planet::setSrcs(Source *srcs) {
     this->srcs = srcs;
 }
 
-Source *Planet::getSrcs() {
+Source *Planet::getSrcs() const {
     return this->srcs;
 }
 
@@ -29,7 +29,7 @@ void Planet::setGravity(float gravity) {
     this->gravity = gravity;
 }
 
-float Planet::getGravity() {
+float Planet::getGravity() const {
     return this->gravity;
 }
 
@@ -37,10 +37,9 @@ void Planet::setAtmosphereState(string state) {
     atmosphereState = state;
 }
 
-string Planet::getAtmosphereState() {
+string Planet::getAtmosphereState() const {
     return atmosphereState;
 }
-
 void Planet::print() {
     cout << "Planet name: " << this->getName() << endl;
     cout << "X: " << this->getX() << endl;

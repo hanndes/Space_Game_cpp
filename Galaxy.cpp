@@ -105,24 +105,3 @@ Galaxy::~Galaxy() {
 }
 
 
-/*  while (planetCounter > 0) {
-    int randomPlanetType = rand() % 3; // 0-2 arasında random value
-    int x = rand() % 5; // 0-4 arasında rastgele bir satır
-    int y = rand() % 5; // 0-4 arasında rastgele bir sütun
-
-    if (gameScene[x][y] == nullptr) { // Hücre boşsa
-      if (typeid(*planets[randomPlanetType]) == typeid(HabitablePlanet)) {
-        cout << "Adding a HabitablePlanet at (" << x << ", " << y << ")" << endl;
-        gameScene[x][y] = new HabitablePlanet();
-      } else if (typeid(*planets[randomPlanetType]) == typeid(GasGiantPlanet)) {
-        cout << "Adding a GasGiantPlanet at (" << x << ", " << y << ")" << endl;
-        gameScene[x][y] = new GasGiantPlanet();
-      } else {
-        cout << "Adding a DwarfPlanet at (" << x << ", " << y << ")" << endl;
-        gameScene[x][y] = new DwarfPlanet();
-      }
-      planetCounter--; // One planet placed decrease counter
-    }
-  }
-  while (blackholeCounter > 0) {
-  }*/

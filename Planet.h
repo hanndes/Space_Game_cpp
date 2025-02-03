@@ -6,10 +6,9 @@
 #define PLANET_H
 
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
 #include "Object.h"
 #include "Source.h"
+#include "SpaceShuttle.h"
 using namespace std;
 
 // Abstract class
@@ -21,16 +20,28 @@ class Planet : public Object {
 
 public:
     Planet();
+
     Planet(char name, int x, int y);
-    string getAtmosphereState();
+
+    string getAtmosphereState() const;
+
     void setAtmosphereState(string state);
-    float getGravity();
+
+    float getGravity() const;
+
     void setGravity(float gravity);
-    Source*getSrcs();
+
+    Source *getSrcs() const;
+
     void setSrcs(Source *srcs);
+
     void print() override;
+
     virtual float calculateLandingCost() const = 0;
-  //  virtual void showSources() const;
+
+    virtual void goToPlanet(SpaceShuttle * ss) const =0;
+
+    //  virtual void showSources() const;
     virtual ~Planet();
 };
 

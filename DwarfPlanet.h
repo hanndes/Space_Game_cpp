@@ -10,7 +10,11 @@
 class DwarfPlanet : public Planet {
 public:
     DwarfPlanet(char name, int x, int y);
+
     float calculateLandingCost() const override;
+
+    void goToPlanet(SpaceShuttle *ss) const override;
+
     ~DwarfPlanet();
 };
 

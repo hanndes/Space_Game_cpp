@@ -4,12 +4,19 @@
 
 #include "DwarfPlanet.h"
 
-DwarfPlanet::DwarfPlanet(char name, int x, int y):Planet(name,x,y) {
+DwarfPlanet::DwarfPlanet(char name, int x, int y): Planet(name, x, y) {
 }
 
+void DwarfPlanet::goToPlanet(SpaceShuttle *ss) const {
+
+}
 
 float DwarfPlanet::calculateLandingCost() const {
-    return 0;
+    const float baseCost = 2.0f;
+    const float fuelCostPerGravity = 0.2f;
+    float cost = baseCost + (fuelCostPerGravity * this->getGravity());
+    cout << "Landing cost for HabitablePlanet calculated: " << cost << endl;
+    return cost;
 }
 
 DwarfPlanet::~DwarfPlanet() {

@@ -6,7 +6,6 @@
 #define HABITABLEPLANET_H
 
 #include <iostream>
-#include "Object.h"
 #include "Planet.h"
 using namespace std;
 
@@ -15,6 +14,7 @@ public:
     HabitablePlanet();
     HabitablePlanet(char name, int x, int y);
     ~HabitablePlanet();
+    void goToPlanet(SpaceShuttle *ss) const override;
     float calculateLandingCost() const override;
 };
 
